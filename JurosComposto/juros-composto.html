@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juros composto</title>
+    <link rel="stylesheet" href="../Css/main.css">
+</head>
+<h1 class="h1">Juros Composto</h1>
+
+<body class="">
+    <main class="">
+        <h1 class="">Resultado</h1>
+        <div class="">
+            <div class="">
+                <input type="number" name="Capital" id="capital" min="0" placeholder="CAPITAL" class="">
+            </div>
+            <div class="">
+                <input type="number" name="taxa" id="taxa" min="0" placeholder="TAXA" class="">
+            </div>
+            <div class="">
+                <input type="number" name="tempo" id="tempo" placeholder="TEMPO" min="0" class="">
+            </div>
+
+            <div class="">
+                <input type="number" name="montante" id="montante" placeholder="MONTANTE"  min="0" class="">
+            </div>
+        </div>
+        <div id="obs">
+            <p class="">Deixe em branco o que quer calcular</p>
+        </div>
+        <div class="">
+            <button class="" onclick="limpar()">Limpar</button>
+            <button class="" onclick="calcular()">Calcular</button>
+            <a href="../index.html" class="">Voltar</a>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>
