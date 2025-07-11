@@ -12,7 +12,7 @@
     <main class="d-flex p-5 bg-primary ">
         <section class="container p-5 bg-dark w-50 h-75" style="max-width: 500px;">
             <div class="row mb-5">
-                <h3 class="text-warning text-center" id="resultado">Resultado</h3>
+                <h3 class="text-warning text-center" id="resultado">Juro Composto</h3>
             </div>
         <div class="d-grid row-gap-3 pt-5" style="grid-template-columns: 1fr;">
                     <div class="row">
@@ -21,27 +21,25 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-10 p-0">
+                        <div class="col-md-9 p-0">
                             <input type="number" name="taxa" id="taxa" min="0" placeholder="TAXA" class="input w-100">
                         </div>
-                        <div class="col-md-2 text-end p-0">
-                            <select  class="from-select w-75" aria-label="Default select example" id="periodo-taxa">
-                                <option value="0" selected disabled>??</option>
-                                <option value="1">a.m</option>
-                                <option value="12">a.a</option>
-                            </select>
+                        <div class="col-md-3 text-end p-0">
+                            <select class="from-select w-75" aria-label="Default select example"  id="periodoTaxa">
+                            <option value="1" selected>Mensal</option>
+                            <option value="12">Anual</option>
+                        </select>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-10 p-0">
+                        <div class="col-md-9 p-0">
                             <input type="number" name="tempo" id="tempo" placeholder="TEMPO" min="0" class="input w-100">
                            </div> 
-                            <div class="col-md-2 text-end p-0">
-                                <select  class="from-select w-75" aria-label="Default select example" id="periodo-tempo">
-                                                        <option value="0" selected disabled>??</option>
-                                                        <option value="1">a.m</option>
-                                                        <option value="12">a.a</option>
-                                </select>
+                            <div class="col-md-3 text-end p-0">
+                                <select class="from-select w-75" aria-label="Default select example"  id="periodoTempo">
+                            <option value="1" selected>Mensal</option>
+                            <option value="12">Anual</option>
+                        </select>
                             </div>
                         </div>
                     

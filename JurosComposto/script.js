@@ -1,64 +1,90 @@
-
-
-let c;
-let i;
-let t;
-let m;
-let resultado;
+let c,i,t,m,pTaxa,pTempo,resultado,taxaao,tempoem;
 
 function pegarValores() {
   resultado = document.querySelector("#resultado");
-   c = Number(document.querySelector("#capital").value);
-   i = Number(document.querySelector("#taxa").value/100);
-   t = Number(document.querySelector("#tempo").value);
-   m = Number(document.querySelector("#montante").value);
+  c = Number(document.querySelector("#capital").value);
+  i = Number(document.querySelector("#taxa").value);
+  t = Number(document.querySelector("#tempo").value);
+  m = Number(document.querySelector("#montante").value);
+  pTaxa = Number(document.querySelector("#periodoTaxa").value);
+  pTempo = Number(document.querySelector("#periodoTempo").value);
 }
 
-const capital = ()=>{
+
+function capital(){
   c = m/Math.pow(1+i,t);
   c = c.toFixed(2);
   c = c.replace(".",',');
-  resultado.innerHTML = `<p>Capital: R$ ${c}</p>`;
+  return c;
 }
 
-const taxa = ()=>{
+function taxa(){
   i = (Math.pow(m/c, 1 / t) - 1)*100 ;
+  if(pTaxa === 12){
+    i = i*12;
+  }
   i = i.toFixed(2);
   i = i.replace(".",',')
-  resultado.innerHTML = `<p>Taxa: ${i}%</p>`;
+  return i; 
 }
 
-const tempo = ()=>{
-  t = Math.log(m/c) / Math.log(1 + i)
+function tempo(){
+  t = (Math.log(m/c) / Math.log(1 + i))
+  if(pTempo === 12){
+    t = t/12
+  }
   t = t.toFixed(2);
   t = t.replace(".",',');
-  resultado.innerHTML = `<p>Tempo ${t}</p>`;
+  return t;
 }
 
 function montante(){
   m = c*Math.pow(1+i,t);
   m = m.toFixed(2);
   m = m.replace(".",',');
-  resultado.innerHTML = `<p>Montante: R$ ${m}</p>`;
-
+  return m;
 }
 
+function converterTaxa(){
+  if(pTaxa === 1){
+    taxaao = "Ao més";
+    i = i/100;
+  }else if(pTaxa === 12){
+    taxaao = "Ao ano";
+    i = (i/12)/100;
+  } 
+  return i;
+}
+
+function converterTempo(){
+  if(pTempo === 1){
+    tempoem = "meses";
+    t = t/1;
+  }else if(pTempo === 12){
+    tempoem = "Anos";
+    t = t*12;
+}
+ return t;
+}
 
 function calcular(){
   pegarValores();
-  if(c == 0){
-    capital();
-  }else if(i == 0){
-    taxa()
-  }else if(t == 0){
-    tempo();
-  }else if(m == 0){
-    montante();
+  converterTaxa();
+  converterTempo();
+
+  if(c === 0){
+      resultado.innerHTML = `<p>Capital: R$ ${capital()}</p>`;
+  }else if(i === 0){
+     resultado.innerHTML = `<p>Taxa: ${taxa()}% ${taxaao}</p>`;
+  }else if(t === 0){
+      resultado.innerHTML = `<p>Tempo: ${tempo()} ${tempoem}</p>`;
+  }else if(m === 0){
+      resultado.innerHTML = `<p>Montante:  R$ ${montante()}</p>`;
   }
 }
 
   function limpar() {
-    resultado.innerHTML = 'Resultado';
+    resultado.innerHTML = 'Juro Composto';
     document.querySelector("#capital").value = "";
     document.querySelector("#taxa").value = "";
     document.querySelector("#tempo").value = "";
