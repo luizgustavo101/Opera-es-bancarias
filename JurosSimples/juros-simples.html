@@ -5,47 +5,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juros Simples</title>
-    <link rel="stylesheet" href="../Css/main.css">
+
+    <link rel="stylesheet" href="../Css/style.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
-<h1 class="h1">Juros Simples</h1>
 
 <body>
-    <main class="">
-        <h1 class="">Resultado</h1>
-        <div class="">
-            <div class="">
-                <input type="number" name="Capital" id="capital" min="0" placeholder="CAPITAL" class="">
+    <main class="d-flex p-5 bg-primary ">
+        <section class="container p-5 bg-dark w-50 h-75" style="max-width: 500px;">
+            <div class="row mb-4">
+                <h3 class="text-warning text-center">Juros Simples</h3>
             </div>
-            <div class="">
-                <input type="number" name="taxa" id="taxa" min="0" placeholder="TAXA" class="" >
-                <select  class="" name="tipo" id="periodo-taxa">
-                    <option value="0" selected disabled>??</option>
-                    <option value="1">a.m</option>
-                    <option value="12">a.a</option>
-                </select>
+
+            <div class="d-grid row-gap-3 pt-3" style="grid-template-columns: 1fr;">
+                <div class="row">
+                    <div class="col p-0">
+                        <input type="number" name="Capital" id="capital" min="0" placeholder="CAPITAL" class="input w-100">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-10 p-0">
+                        <input type="number" name="taxa" id="taxa" min="0" placeholder="TAXA" class="input w-100">
+                    </div>
+                    <div class="col-md-2 text-end p-0">
+                        <select class="from-select w-75" aria-label="Default select example" id="periodo-taxa">
+                            <option value="0" selected disabled>??</option>
+                            <option value="1">a.m</option>
+                            <option value="12">a.a</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-10 p-0">
+                        <input type="number" name="tempo" id="tempo" placeholder="TEMPO" min="0" class="input w-100">
+                    </div>
+                    <div class="col-md-2 text-end p-0">
+                        <select class="from-select w-75" aria-label="Default select example"  id="periodo-tempo">
+                            <option value="0" selected disabled>??</option>
+                            <option value="1">mês</option>
+                            <option value="12">ano</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col p-0">
+                        <input type="number" name="juros" id="juros" placeholder="JUROS" min="0" class="input w-100">
+                    </div>
+                </div>
             </div>
-            <div class="">
-                <input type="number" name="tempo" id="tempo" placeholder="TEMPO" min="0" class="">
-                <select  class="" name="tipo" id="periodo-taxa">
-                    <option value="0" selected disabled>??</option>
-                    <option value="1">més</option>
-                    <option value="12">ano</option>
-                </select>
+            <div class="row mt-4 pt-4">
+                <a class="btn btn-outline-danger mt-2" onclick="limpar()">Limpar</a>
+                <a class="btn btn-outline-success mt-2" onclick="calcular()">Calcular</a>
+                <a class="btn btn-outline-primary mt-2" href="../index.html">Voltar</a>
             </div>
-            <div class="">
-                <input type="number" name="juros" id="juros" placeholder="JUROS" min="0" class="">
-            </div>
-        </div>
-        <div id="obs">
-            <p class="">Deixe em branco o que quer calcular</p>
-        </div>
-        <div class="">
-            <button class="" onclick="limpar()">Limpar</button>
-            <button class="" onclick="calcular()">Calcular</button>
-            <a href="../index.html" class="">Voltar</a>
-        </div>
+        </section>
     </main>
+
     <script src="./script.js"></script>
+    <script type="module" src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
 </body>
 
 </html>

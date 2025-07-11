@@ -3,16 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="../Operações-Bancarias/Css/main.css">
+
+    <link rel="stylesheet" href="./Css/style.css">
+    <link rel="stylesheet" href="../Operações-Bancarias/Css/main.css">
     <link rel="stylesheet" href="../Operações-Bancarias/node_modules/bootstrap/dist/css/bootstrap.css">
     <title>Operações</title>
 </head>
 <body>
-    <main class="d-flex justify-content-center p-5 bg-white">
-        <article class="container p-3 bg-dark">
-            <button class="btn btn-outline-light">Juro Simples</button>
+    <main class="d-flex p-5 bg-primary">
+        <article class="container p-5 bg-dark w-50 overflow-y-scroll" style="max-width: 500px;">
+        <div class="row"></div>
+        <div class="row gap-2">
+                <a href="./JurosSimples/juros-simples.html" class="btn btn-outline-light">Juro Simples</a>
+                <a href="./JurosComposto/juros-composto.html" class="btn btn-outline-light">Juro Composto</a>
+                <a href="./DescontoSimplesComercial/Desconto-Simples-Comercial.html" class="btn btn-outline-light">Desconto Simples Comercial</a>
+        </div>
         </article>
     </main>
-    <script type="module" src="../Operações-Bancarias/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../Operações-Bancarias/node_modules/bootstrap/dist/js/bootstrap.js"></script>
 </body>
 </html>

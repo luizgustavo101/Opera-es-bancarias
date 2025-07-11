@@ -1,3 +1,5 @@
+
+
 let c;
 let i;
 let t;
@@ -5,7 +7,7 @@ let m;
 let resultado;
 
 function pegarValores() {
-  resultado = document.querySelector(".resultado");
+  resultado = document.querySelector("#resultado");
    c = Number(document.querySelector("#capital").value);
    i = Number(document.querySelector("#taxa").value/100);
    t = Number(document.querySelector("#tempo").value);
@@ -38,6 +40,7 @@ function montante(){
   m = m.toFixed(2);
   m = m.replace(".",',');
   resultado.innerHTML = `<p>Montante: R$ ${m}</p>`;
+
 }
 
 

@@ -1,40 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desconto Simples Comercial</title>
-    <link rel="stylesheet" href="../Css/main.css">
+    <link rel="stylesheet" href="../Css/style.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
 
-<body class="">
-    <main class="">
-        <h1 class="resultado">Resultado</h1>
-        <div class="">
-            <div class="">
-                <input type="number" name="Desconto" id="desconto" placeholder="DESCONTO" class="" min="0">
+<body>
+    <main class="d-flex p-5 bg-primary">
+        <section class="container p-5 bg-dark w-50 h-75" style="max-width: 500px;">
+            <div class="row mb-4">
+                <h3 class="text-warning text-center">Desconto Simples Comercial</h3>
             </div>
-            <div class="element">
-                <input type="number" name="Valor-nominal" id="valornominal" placeholder="VALOR NOMINAL" class="" min="0">
+
+            <div class="d-grid row-gap-3 pt-3" style="grid-template-columns: 1fr;">
+                <div class="row">
+                    <div class="col p-0">
+                        <input type="number" name="Desconto" id="desconto" placeholder="DESCONTO" min="0" class="w-100">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col p-0">
+                        <input type="number" name="Valor-nominal" id="valornominal" placeholder="VALOR NOMINAL" min="0" class="w-100">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col p-0">
+                        <input type="number" name="Taxa-de-desconto" id="taxa-de-desconto" placeholder="TAXA DE DESCONTO" min="0">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col p-0">
+                        <input type="number" name="Tempo" id="tempo" placeholder="TEMPO" min="0">
+                    </div>
+                </div>
             </div>
-            <div class="element">
-                <input type="number" name="Taxa-de-desconto" id="taxa-de-desconto" placeholder="TAXA DE DESCONTTO" class="input" min="0">
+            <div class="row mt-4 pt-4">
+                <a class="btn btn-outline-danger mt-2" onclick="limpar()">Limpar</a>
+                <a class="btn btn-outline-success mt-2" onclick="calcular()">Calcular</a>
+                <a class="btn btn-outline-primary mt-2" href="../index.html">Voltar</a>
             </div>
-            <div class="element">
-                <input type="number" name="Tempo" id="tempo" placeholder="TEMPO" class="" min="0">
-            </div>
-        </div>
-        <div id="obs">
-            <p class="obs">Deixe em branco o que quer calcular</p>
-        </div>
-        <div class="navegar">
-            <button class="limpar" onclick="limpar()">Limpar</button>
-            <button class="calcular" onclick="calcular()">Calcular</button>
-            <a href="../index.html" class="voltar">Voltar</a>
-        </div>
+        </section>
     </main>
+
     <script src="./script.js"></script>
+    <script type="module" src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
 </body>
 
 </html>
