@@ -1,4 +1,5 @@
 let c,i,t,m,pTaxa,pTempo,resultado,taxaao,tempoem;
+const casasDecimais = 2;
 
 function pegarValores() {
   resultado = document.querySelector("#resultado");
@@ -13,7 +14,7 @@ function pegarValores() {
 
 function capital(){
   c = m/Math.pow(1+i,t);
-  c = c.toFixed(2);
+  c = c.toFixed(casasDecimais);
   c = c.replace(".",',');
   return c;
 }
@@ -23,7 +24,7 @@ function taxa(){
   if(pTaxa === 12){
     i = i*12;
   }
-  i = i.toFixed(2);
+  i = i.toFixed(casasDecimais);
   i = i.replace(".",',')
   return i; 
 }
@@ -33,14 +34,14 @@ function tempo(){
   if(pTempo === 12){
     t = t/12
   }
-  t = t.toFixed(2);
+  t = t.toFixed(casasDecimais);
   t = t.replace(".",',');
   return t;
 }
 
 function montante(){
   m = c*Math.pow(1+i,t);
-  m = m.toFixed(2);
+  m = m.toFixed(casasDecimais);
   m = m.replace(".",',');
   return m;
 }
