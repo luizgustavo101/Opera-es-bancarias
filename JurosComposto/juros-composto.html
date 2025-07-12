@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juros composto</title>
-    <link rel="stylesheet" href="../Css/main.css">
+    <link rel="stylesheet" href="../Css/style.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
+<<<<<<< HEAD
 <h1 class="h1">Juros Composto</h1>
 
 <body class="body">
@@ -25,8 +27,50 @@
 
             <div class="element">
                 <input type="number" name="montante" id="montante" placeholder="MONTANTE"  min="0" class="input">
+=======
+<body>
+    <main class="d-flex p-5 bg-primary ">
+        <section class="container p-5 bg-dark w-50 h-100" style="max-width: 500px;">
+            <div class="row mb-5">
+                <h3 class="text-warning text-center" id="resultado">Juro Composto</h3>
+>>>>>>> implementando-bootstrap
             </div>
+        <div class="d-grid row-gap-3 pt-5" style="grid-template-columns: 1fr;">
+                    <div class="row">
+                        <div class="col p-0">
+                            <input type="number" name="Capital" id="capital" min="0" placeholder="CAPITAL" class="input w-100">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-9 p-0">
+                            <input type="number" name="taxa" id="taxa" min="0" placeholder="TAXA" class="input w-100">
+                        </div>
+                        <div class="col-md-3 text-end p-0">
+                            <select class="from-select w-75" aria-label="Default select example"  id="periodoTaxa">
+                            <option value="1" selected>Mensal</option>
+                            <option value="12">Anual</option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-9 p-0">
+                            <input type="number" name="tempo" id="tempo" placeholder="TEMPO" min="0" class="input w-100">
+                           </div> 
+                            <div class="col-md-3 text-end p-0">
+                                <select class="from-select w-75" aria-label="Default select example"  id="periodoTempo">
+                            <option value="1" selected>Mensal</option>
+                            <option value="12">Anual</option>
+                        </select>
+                            </div>
+                        </div>
+                    
+                    <div class="row">
+                        <div class="col p-0">
+                            <input type="number" name="montante" id="montante" placeholder="MONTANTE"  min="0" class="input w-100">
+                        </div>
+                    </div>
         </div>
+<<<<<<< HEAD
         <div id="obs">
             <p class="obs">Deixe em branco o que quer calcular</p>
         </div>
@@ -35,8 +79,17 @@
             <button class="calcular" onclick="calcular()">Calcular</button>
             <a href="../index.html" class="voltar">Voltar</a>
         </div>
+=======
+        <div class="row mt-5 pt-5">
+                   <a class="btn btn-outline-danger mt-2" onclick="limpar()">Limpar</a>
+                   <a class="btn btn-outline-success mt-2" onclick="calcular()">Calcular</a>
+                   <a class="btn btn-outline-primary mt-2" href="../index.html">Voltar</a>
+           </div>
+        </section>
+>>>>>>> implementando-bootstrap
     </main>
-    <script src="./script.js"></script>
+
 </body>
+<script src="script.js"></script>
 
 </html>
