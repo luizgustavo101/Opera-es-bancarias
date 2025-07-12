@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desconto Simples Comercial</title>
+    <link rel="stylesheet" href="../Css/main.css">
+</head>
+<h1 class="h1">Desconto Simples Comercial</h1>
+
+<body class="body">
+    <main class="main">
+        <h1 class="resultado">Resultado</h1>
+        <div class="container">
+            <div class="element">
+                <input type="number" name="Desconto" id="desconto" placeholder="DESCONTO" class="input" min="0">
+            </div>
+            <div class="element">
+                <input type="number" name="Valor-nominal" id="valornominal" placeholder="VALOR NOMINAL" class="input" min="0">
+            </div>
+            <div class="element">
+                <input type="number" name="Taxa-de-desconto" id="taxa-de-desconto" placeholder="TAXA DE DESCONTTO" class="input" min="0">
+            </div>
+            <div class="element">
+                <input type="number" name="Tempo" id="tempo" placeholder="TEMPO" class="input" min="0">
+            </div>
+        </div>
+        <div id="obs">
+            <p class="obs">Deixe em branco o que quer calcular</p>
+        </div>
+        <div class="navegar">
+            <button class="limpar" onclick="limpar()">Limpar</button>
+            <button class="calcular" onclick="calcular()">Calcular</button>
+            <a href="../index.html" class="voltar">Voltar</a>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>
