@@ -34,37 +34,21 @@ function principal(){
     compararPeriodos();
     calcular();
     if(periodoTaxanominal < 30){
-        resultado.innerText = `${taxaEfetiva}% ao Dia`
+        resultado.innerText = `${taxaEfetiva}% Efetiva ao Dia`
     }else if(periodoTaxanominal < 60){
-        resultado.innerText = `${taxaEfetiva}% ao Més`
+        resultado.innerText = `${taxaEfetiva}% Efetiva ao Més`
     }else if(periodoTaxanominal < 90){
-        resultado.innerText = `${taxaEfetiva}% ao Bimestre`
+        resultado.innerText = `${taxaEfetiva}% Efetiva ao Bimestre`
     }else if(periodoTaxanominal < 180){
-        resultado.innerText = `${taxaEfetiva}% ao Trimestre`
+        resultado.innerText = `${taxaEfetiva}% Efetiva ao Trimestre`
     }else if(periodoTaxanominal < 360){
-        resultado.innerText = `${taxaEfetiva}% ao Semestre`
+        resultado.innerText = `${taxaEfetiva}% Efetiva ao Semestre`
     }else{
-        resultado.innerText = `${taxaEfetiva}% ao Ano`
+        resultado.innerText = `${taxaEfetiva}% Efetiva ao Ano`
     }
-
-
-
 }
-
 
 function limpar(){
     resultado.innerText = "Taxa Nominal para Efetiva"
     document.querySelector("#taxaNominal").value = "";
 }
-
-cap9itaizacaoNominal = 180
-Capitalizaçao = 360
-p = cap9itaizacaoNominal/Capitalizaçao;
-iN = 12
-
-
-iE = (iN/p)/100
-
-efetiva = (Math.pow(1+iE,p) - 1) *100
-
-console.log(efetiva)
